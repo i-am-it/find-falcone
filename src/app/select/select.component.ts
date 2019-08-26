@@ -89,8 +89,14 @@ export class SelectComponent implements OnInit {
         {
           for (let vehicle of this.vehicles){
             if(vehicle.name === planet.selectedvehicle){
-              vehicle.total_no = vehicle.total_no - 1
+              if(vehicle.total_no === 0){
+                planet.selectedvehicle =""
+              }
+              else{
+                vehicle.total_no = vehicle.total_no - 1
               this.timetaken = this.timetaken + (planet.distance/vehicle.speed)
+              }
+              
             }
           }
         }

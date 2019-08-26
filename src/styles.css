@@ -12,7 +12,7 @@ h4{
 }
 
 label{
-    font-size: .7rem;
+    font-size: .9rem;
 }
 
 body  {
@@ -55,5 +55,9 @@ body  {
     }
     .pad{
         padding: 1rem
+    }
+    .card{
+        height: 140px !important;
+        width: 140px !important;
     }
 }

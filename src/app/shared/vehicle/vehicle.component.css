@@ -1,3 +1,6 @@
 .disabled{
-    color: lightgray;
+    color:lightgrey;
+}
+.selected{
+    color: green;
 }
