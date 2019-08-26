@@ -1,0 +1,13 @@
+<a class="btn btn-primary" id="{{planet.name}}1" data-toggle="collapse" href="#{{planet.name}}" role="button" aria-expanded="false" aria-controls="collapseExample" (click)="selectPlanet(planet.name)">
+    <div class="card mb-3 btn" data-toggle="collapse" style="width: 117px; height: 117px;border: solid; border-color: black;">
+        <div class="row no-gutters" style="height:100%">
+          <div class="col-md-12">
+            <img src="../../../assets/{{planet.name}}.jpg" class="card-img" alt="{{planet.name}}">
+          </div>
+        </div>
+    </div>
+</a>
+<div class="collapse" id="{{planet.name}}">
+    <app-vehicle [planet]="planet" [vehicles]="vehicles" (selected)="onSelect($event)"></app-vehicle>
+</div>
+

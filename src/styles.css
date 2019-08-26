@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    font-size: 16px;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 1rem;
+}
+
+label{
+    font-size: .7rem;
+}
+
+body  {
+    font-family: "Comic Sans MS" !important;
+    background-image: url(./assets/body-background.jpg);
+    color: yellow !important;
+}
+
+@media only screen and (max-width: 992px) {
+    :root{
+        font-size: 14px;
+    }
+    .pad{
+        padding: 1rem
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    :root{
+        font-size: 12px;
+    }
+    .pad{
+        padding: 1rem
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    :root{
+        font-size: 16px;
+    }
+
+    label{
+        font-size: 1rem;
+    }
+    .planets{
+        flex-direction:column-reverse !important;
+        align-items: center !important;
+        align-content: space-around !important;
+
+    }
+    .pad{
+        padding: 1rem
+    }
+}

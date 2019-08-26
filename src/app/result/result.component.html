@@ -1,0 +1,23 @@
+<div style="text-align:center">
+        <h2 style="margin:20px;">
+          Finding Falcone!
+        </h2>
+        
+</div>
+<div *ngIf="resultarr.length===3" style="text-align:center">
+    <h4 style="margin:20px 0px 50px 0px"><p>Success! Congratulations on Finding Falcone. King Shan is mighty pleased.</p></h4>
+    
+    <h6>Time Taken : {{resultarr[2]}}</h6>
+    <h6>Planet found : {{resultarr[0]}}</h6>
+</div>
+<div *ngIf="resultarr.length===2 && resultarr[0]==='0'" style="text-align:center">
+        <h4 style="margin:20px 0px 50px 0px"><p>Sorry! You Failed in Finding Falcone.</p></h4>
+    <h6>Time Taken : {{resultarr[1]}}</h6>
+    <h6>Planet found : - </h6>
+</div>
+<div *ngIf="resultarr.length===2 && resultarr[0]!=='0'" style="text-align:center">
+    <p>{{resultarr[0]}}</p>
+</div>
+<div style="display: flex; flex-direction:row; justify-content: space-around;margin-top: 50px; margin-bottom: 10px;">
+        <button type="button" class="btn btn-warning" [routerLink]="['']">Start Again</button>
+</div>

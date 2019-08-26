@@ -1,0 +1,19 @@
+<div style="text-align:center">
+        <h2 style="margin:20px;">
+          Finding Falcone!
+        </h2>
+        <h4 style="margin:20px 0px 50px 0px">Select any 4 planets you want to search in:</h4>
+</div>
+<div class="planets" style="display: flex; flex-direction:row; justify-content: space-around;flex-wrap: wrap">
+<ng-container *ngIf="planets">
+        <app-planet *ngFor = "let planet of planets" class="{{planet.name}} pad" [planet]="planet" [vehicles]="this.vehicles" (onselected)="calculateTime($event,planet)" (selectedPlanet)="onPlanetSelection($event)" (unselectedPlanet)="offPlanetSelection($event,planet)"></app-planet>
+</ng-container>
+<div>
+    <span style="padding:5px;background-color:yellow;color:black;border-radius: 1rem">Time taken : {{timetaken}}</span> 
+</div>
+</div>
+
+<div style="display: flex; flex-direction:row; justify-content: space-around;margin-top: 50px; margin-bottom: 10px;">
+    <button type="button" class="btn btn-warning" [attr.disabled]="findButton()" (click)="findFalcone()">Find Falcon</button>
+</div>
+
