@@ -12,10 +12,10 @@ import {  Router } from '@angular/router';
 })
 export class SelectComponent implements OnInit {
 
-  private planets
-  private vehicles
+   planets
+   vehicles
   private err
-  private timetaken = 0
+   timetaken = 0
   private selectedPlanets=[]
   private token
   constructor(private serv: AppServiceService, private router:Router) {
